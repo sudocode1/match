@@ -40,7 +40,8 @@ $results2 = $conn->query($sql);
 $personA = $results->fetch_assoc();
 $personB = $results2->fetch_assoc();
 
-while ($personA === $personB) {
+while ($personA === $personB || $personA['ip'] == $_SERVER["REMOTE_ADDR"] || $personB['ip'] == $_SERVER["REMOTE_ADDR"]) {
+    $personA = $conn->query($sql)->fetch_assoc();
     $personB = $conn->query($sql)->fetch_assoc();
 }
 

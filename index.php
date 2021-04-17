@@ -67,8 +67,8 @@ while ($personA === $personB) {
 </tr>
 
 <tr>
-<td class="withpadding"> <?php echo $personA["id"].'<br>'.$personA["datadesc"] ?> </td>
-<td class="withpadding"> <?php echo $personB["id"].'<br>'.$personB["datadesc"] ?> </td>
+<td class="withpadding"> <?php echo $personA["datadesc"] ?> </td>
+<td class="withpadding"> <?php echo $personB["datadesc"] ?> </td>
 
 </tr>
 

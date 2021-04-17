@@ -38,12 +38,10 @@ table, th, td {
 }
 
 .withpadding {
-    padding: 100%;
     align-items: center;
 }
 
 td {
-
     font-weight: bold;
 }
 

@@ -26,8 +26,8 @@ if (isset($_POST['sm']) && array_key_exists('selection', $_POST)) {
     $res = $conn->query("SELECT * FROM rankings WHERE id = $sel");
 
     $data = $res->fetch_assoc();
-
-    echo '<table><tr><th>Selected</th></tr><tr><td>'. $data['dataname'] . '<br>' . $data['datadesc'] . '<br><a href="' . $data['link'] . '">' . $data['link'] . '</a>' .'</td></tr></table><BR>';
+    
+    echo '<table><tr><th>Selected</th></tr><tr><td>'. htmlspecialchars($data['dataname']) . '<br>' . htmlspecialchars($data['datadesc']) . '<br><a href="' . htmlspecialchars($data['link']) . '">' . htmlspecialchars($data['link']) . '</a>' .'</td></tr></table><BR>';
 
     die('<a href="index.php"><button>next</button></a>');
     

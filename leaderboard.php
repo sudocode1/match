@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         // echo "id: " . $row["userId"]. " - xp: " . $row["xpCount"]. " - level:" . $row["level"]. "<br>";
         ++$rank;
-        echo "<tr><td>". $rank . "</td><td>" . $row["dataname"] . "</td><td>" . $row["score"] . "</td></tr>";
+        echo "<tr><td>". $rank . "</td><td>" . htmlspecialchars($row["dataname"]) . "</td><td>" . $row["score"] . "</td></tr>";
     }
 }
 
